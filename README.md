@@ -50,7 +50,7 @@ This the **ROS2** Hardware Interface Package for the **`EPMC (Easy PID Motor Con
 #
 
 #### Sample robot test
- - please chekout the [**`easy_bot`**](https://github.com/robocre8/easy_bot) package to see proper sample of how the EPMC is used.
+ - please chekout the [**`easy_demo_bot`**](https://github.com/robocre8/easy_demo_bot) package to see proper sample of how the EPMC is used.
 
 #
 
