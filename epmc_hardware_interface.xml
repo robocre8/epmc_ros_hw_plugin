@@ -1,0 +1,9 @@
+<library path="epmc_hardware_interface">
+  <class name="epmc_hardware_interface/EPMCHardwareInterface"
+         type="epmc_hardware_interface::EPMCHardwareInterface"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      The ros2 hardware interface package for the Easy PID Motor Controller Module (i.e. L298N EPMC MODULE or a Custom EPMC Module)
+    </description>
+  </class>
+</library>
