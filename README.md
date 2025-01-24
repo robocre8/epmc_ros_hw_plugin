@@ -49,6 +49,11 @@ This the **ROS2** Hardware Interface Package for the **`EPMC (Easy PID Motor Con
 
 #
 
+#### Sample robot test
+ - please chekout the (**`easy_bot`**)[https://github.com/robocre8/easy_bot] package to see proper sample of how the EPMC is used.
+
+#
+
 #### Serial port check for the EPMC Module
 - ensure the **`Easy PID Motor Controller (EPMC) Module`** (i.e **`L298N EPMC Module`** or any **`Custom EPMC Interface Board`**), with the motors connected and fully set up for velocity PID, is connected to the microcomputer or PC via USB.
 
