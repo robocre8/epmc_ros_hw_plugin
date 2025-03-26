@@ -20,7 +20,7 @@ This the **ROS2** Hardware Interface Package for the **`EPMC (Easy PID Motor Con
 - install `rosdep` so you can install necessary ros related dependencies for the package.
   ```shell
   sudo apt-get update
-  sudo apt install python3-rosdep2
+  sudo apt install python3-rosdep
   sudo rosdep init
   rosdep update
   ```
