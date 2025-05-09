@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <!-- ############# add ros2_control => INSERT EPMC_HARDWARE_INTERFACE ############### -->
+    <!-- ############# add ros2_control => INSERT EPMC_ROS_HW_PLUGIN ############### -->
 
     <ros2_control name="epmc_ros2_control" type="system">
 
       <hardware>
-        <plugin>epmc_hardware_interface/EPMCHardwareInterface</plugin>
+        <plugin>epmc_ros_hw_plugin/EPMCHardwareInterface</plugin>
         <param name="motorA_wheel_name">left_wheel_joint</param>
         <param name="motorB_wheel_name">right_wheel_joint</param>
         <param name="port">/dev/ttyUSB0</param>

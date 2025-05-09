@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "epmc_hardware_interface/epmc_hardware_interface.hpp"
+#include "epmc_ros_hw_plugin/epmc_ros_hw_plugin.hpp"
 
 #include <chrono>
 #include <cmath>
@@ -28,7 +28,7 @@ void delay_ms(unsigned long milliseconds)
   usleep(milliseconds * 1000);
 }
 
-namespace epmc_hardware_interface
+namespace epmc_ros_hw_plugin
 {
   hardware_interface::CallbackReturn EPMCHardwareInterface::on_init(
       const hardware_interface::HardwareInfo &info)
@@ -224,7 +224,7 @@ namespace epmc_hardware_interface
     return hardware_interface::return_type::OK;
   }
 
-  hardware_interface::return_type epmc_hardware_interface ::EPMCHardwareInterface::write(
+  hardware_interface::return_type epmc_ros_hw_plugin ::EPMCHardwareInterface::write(
       const rclcpp::Time & /*time*/, const rclcpp::Duration & /*period*/)
   {
     if (!epmc_.connected())
@@ -242,8 +242,8 @@ namespace epmc_hardware_interface
     return hardware_interface::return_type::OK;
   }
 
-} // namespace epmc_hardware_interface
+} // namespace epmc_ros_hw_plugin
 
 #include "pluginlib/class_list_macros.hpp"
 PLUGINLIB_EXPORT_CLASS(
-    epmc_hardware_interface::EPMCHardwareInterface, hardware_interface::SystemInterface)
+    epmc_ros_hw_plugin::EPMCHardwareInterface, hardware_interface::SystemInterface)

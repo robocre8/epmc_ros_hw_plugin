@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef EPMC_HARDWARE_INTERFACE_HPP
-#define EPMC_HARDWARE_INTERFACE_HPP
+#ifndef EPMC_ROS_HW_PLUGIN_HPP
+#define EPMC_ROS_HW_PLUGIN_HPP
 
 #include <memory>
 #include <string>
@@ -31,11 +31,11 @@
 #include "rclcpp_lifecycle/node_interfaces/lifecycle_node_interface.hpp"
 #include "rclcpp_lifecycle/state.hpp"
 
-#include "epmc_hardware_interface/visibility_control.h"
-#include "epmc_hardware_interface/epmc_serial.hpp"
-#include "epmc_hardware_interface/motor.hpp"
+#include "epmc_ros_hw_plugin/visibility_control.h"
+#include "epmc_ros_hw_plugin/epmc_serial.hpp"
+#include "epmc_ros_hw_plugin/motor.hpp"
 
-namespace epmc_hardware_interface
+namespace epmc_ros_hw_plugin
 {
   class EPMCHardwareInterface : public hardware_interface::SystemInterface
   {
@@ -51,37 +51,37 @@ namespace epmc_hardware_interface
   public:
     RCLCPP_SHARED_PTR_DEFINITIONS(EPMCHardwareInterface);
 
-    EPMC_HARDWARE_INTERFACE_PUBLIC
+    EPMC_ROS_HW_PLUGIN_PUBLIC
     hardware_interface::CallbackReturn on_init(
         const hardware_interface::HardwareInfo &info) override;
 
-    EPMC_HARDWARE_INTERFACE_PUBLIC
+    EPMC_ROS_HW_PLUGIN_PUBLIC
     std::vector<hardware_interface::StateInterface> export_state_interfaces() override;
 
-    EPMC_HARDWARE_INTERFACE_PUBLIC
+    EPMC_ROS_HW_PLUGIN_PUBLIC
     std::vector<hardware_interface::CommandInterface> export_command_interfaces() override;
 
-    EPMC_HARDWARE_INTERFACE_PUBLIC
+    EPMC_ROS_HW_PLUGIN_PUBLIC
     hardware_interface::CallbackReturn on_configure(
         const rclcpp_lifecycle::State &previous_state) override;
 
-    EPMC_HARDWARE_INTERFACE_PUBLIC
+    EPMC_ROS_HW_PLUGIN_PUBLIC
     hardware_interface::CallbackReturn on_cleanup(
         const rclcpp_lifecycle::State &previous_state) override;
 
-    EPMC_HARDWARE_INTERFACE_PUBLIC
+    EPMC_ROS_HW_PLUGIN_PUBLIC
     hardware_interface::CallbackReturn on_activate(
         const rclcpp_lifecycle::State &previous_state) override;
 
-    EPMC_HARDWARE_INTERFACE_PUBLIC
+    EPMC_ROS_HW_PLUGIN_PUBLIC
     hardware_interface::CallbackReturn on_deactivate(
         const rclcpp_lifecycle::State &previous_state) override;
 
-    EPMC_HARDWARE_INTERFACE_PUBLIC
+    EPMC_ROS_HW_PLUGIN_PUBLIC
     hardware_interface::return_type read(
         const rclcpp::Time &time, const rclcpp::Duration &period) override;
 
-    EPMC_HARDWARE_INTERFACE_PUBLIC
+    EPMC_ROS_HW_PLUGIN_PUBLIC
     hardware_interface::return_type write(
         const rclcpp::Time &time, const rclcpp::Duration &period) override;
 
@@ -92,6 +92,6 @@ namespace epmc_hardware_interface
     Motor motorB_;      // motorB setup
   };
 
-} // namespace epmc_hardware_interface
+} // namespace epmc_ros_hw_plugin
 
-#endif // EPMC_HARDWARE_INTERFACE_HPP
+#endif // EPMC_ROS_HW_PLUGIN_HPP

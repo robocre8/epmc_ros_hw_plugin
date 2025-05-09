@@ -10,9 +10,9 @@ class Motor
     public:
 
     std::string name = "";
-    double cmdAngVel = 0.0;
-    double angPos = 0.0;
-    double angVel = 0.0;
+    double cmdAngVel = 0.0; // velocity command interface
+    double angPos = 0.0; // position state interface
+    double angVel = 0.0; // velocity state interface
 
     Motor() = default;
 
@@ -20,15 +20,11 @@ class Motor
     {
       setup(motor_wheel_name);
     }
-
-    
+  
     void setup(const std::string &motor_wheel_name)
     {
       name = motor_wheel_name;
     }
-
-
-
 };
 
 

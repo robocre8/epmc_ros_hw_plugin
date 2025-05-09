@@ -27,11 +27,11 @@ This the **ROS2** Hardware Interface Package for the **`EPMC (Easy PID Motor Con
 
 #
 
-#### How to build the epmc_hardware_interface plugin package 
+#### How to build the epmc_ros_hw_plugin plugin package 
 - In the `src/` folder of your `ros workspace`, clone the repo
   (or you can download and add it manually to the `src/` folder)
   ```shell
-  git clone -b humble https://github.com/robocre8/epmc_hardware_interface.git
+  git clone -b humble https://github.com/robocre8/epmc_ros_hw_plugin.git
   ```
 
 - from the `src/` folder, cd into the root directory of your `ros workspace` and run rosdep to install all necessary ros dependencies
@@ -39,13 +39,13 @@ This the **ROS2** Hardware Interface Package for the **`EPMC (Easy PID Motor Con
   cd ../
   rosdep install --from-paths src --ignore-src -r -y
   ```
-- build the `epmc_hardware_interface` package with colcon (in the root folder of your ros workspace):
+- build the `epmc_ros_hw_plugin` package with colcon (in the root folder of your ros workspace):
   ```shell
-  colcon build --packages-select epmc_hardware_interface
+  colcon build --packages-select epmc_ros_hw_plugin
   ```
 > [!NOTE]   
-> The **epmc_hardware_interface** package will now be available for use in any project in your ros workspace.
-> You can see example of how the use the `epmc_hardware_interface` in the `example_control_file`
+> The **epmc_ros_hw_plugin** package will now be available for use in any project in your ros workspace.
+> You can see example of how the use the `epmc_ros_hw_plugin` in the `example_control_file`
 
 #
 
