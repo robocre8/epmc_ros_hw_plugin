@@ -1,15 +1,12 @@
 ## EPMC (Easy PID Motor Controller) ROS2 Hardware Interface Package
 This the **ROS2** Hardware Interface Package for the **`EPMC (Easy PID Motor Controller) Module`** (i.e **`L298N EPMC Module`** or any **`Custom EPMC Interface Board`**) with **ROS2** in a PC or microcomputer, after successful setup with the [epmc_setup_application](https://github.com/robocre8/epmc_setup_application).
 
-> [!NOTE]  
-> It should be used with your ros2 project running on linux `Ubuntu 22.04` [`ros-humble`] (e.g Raspberry Pi, PC, etc.) 
-
 #
 
 ## How to Use the Package
 
 #### Prequisite
-- ensure you've already set up your microcomputer or PC system with [`ros-humble`](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html) with [`colcon`](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html) and your `ros workspace` also setup
+- ensure you've already set up your microcomputer or PC system with ROS2
 
 - install the `libserial-dev` package on your linux machine
   ```shell
@@ -31,7 +28,7 @@ This the **ROS2** Hardware Interface Package for the **`EPMC (Easy PID Motor Con
 - In the `src/` folder of your `ros workspace`, clone the repo
   (or you can download and add it manually to the `src/` folder)
   ```shell
-  git clone -b humble https://github.com/robocre8/epmc_ros_hw_plugin.git
+  git clone https://github.com/robocre8/epmc_ros_hw_plugin.git
   ```
 
 - from the `src/` folder, cd into the root directory of your `ros workspace` and run rosdep to install all necessary ros dependencies
